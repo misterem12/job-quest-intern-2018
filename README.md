@@ -15,7 +15,18 @@ Code must be writted in Javascript language. The code will be tested with Node8,
 ```
 Answer:
 ```
--- insert your answer here
+function shift(list,dir,i){
+    var size = list.length
+    var nlist = new Array()
+    if(dir=='right') i *= -1
+    //console.log(size)
+    for(var index = (size+i)%size; nlist.length<size; index=(index+1)%size){
+        //console.log(index)
+        nlist.push(list[index])
+    }
+    list = nlist
+    console.log(list)
+}
 ```
 2. Download [hero.json](https://github.com/takemetour/job-quest-intern-2018/blob/master/hero.json) and write a code to caculate these values from **hero.json**
 - 2.1 Average **networth** of all heroes
